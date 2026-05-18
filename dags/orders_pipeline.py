@@ -15,7 +15,7 @@ default_args = {
 with DAG(
     dag_id="orders_api_pipeline",
     default_args=default_args,
-    schedule_interval="*/10 * * * *",
+    schedule_interval=None,
     catchup=False,
     max_active_runs=1,
     description="Micro-batch Orders API -> Data Lake -> Spark -> ClickHouse",
